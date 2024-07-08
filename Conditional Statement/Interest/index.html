@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest</title>
+</head>
+<body>
+    <h2>Interest Rate</h2>
+    <p id="principal"></p>
+    <p id="year"></p>
+    <p id="interest"></p>
+    <p id="totalInterest"></p>
+
+    <script>
+        let principal = 65000;
+        let year = 8;
+        let interest;
+
+        if (year >= 3) {
+            if (year >= 3 && year <= 5) {
+                interest = 3;
+            } else if (year > 5 && year <= 8) {
+                interest = 5;
+            } else if (year > 8 && year <= 12) {
+                interest = 12;
+            } else {
+                interest = 15;
+            }
+
+            let totalInterest = (principal * interest * year) / 100;
+
+         
+            document.getElementById("principal").innerHTML = "Principal Amount: " + principal;
+            document.getElementById("year").innerHTML = "Year: " + year;
+            document.getElementById("interest").innerHTML = "Rate of interest: " + interest + "%";
+            document.getElementById("totalInterest").innerHTML = "Total interest: " + totalInterest;
+        } else {
+            console.log("Number of years should be greater than 2");
+        }
+    </script>
+</body>
+</html>
+
+

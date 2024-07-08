@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting </title>
+</head>
+<body>
+    <h2>Voting</h2>
+    <p id="age"></p>
+    <p id="Result"></p>
+
+    <script>
+        let age = 18; 
+
+        let eligibilityMessage;
+        if (age >= 18) {
+            eligibilityMessage = "Eligible to vote.";
+        } else if (age > 0 && age < 18) {
+            eligibilityMessage = "Not eligible to vote.";
+        } else {
+            eligibilityMessage = "Please enter a valid age.";
+        }
+
+        document.getElementById('age').innerHTML = "Age: " + age;
+        document.getElementById('Result').innerHTML = eligibilityMessage;
+    </script>
+</body>
+</html>
+
